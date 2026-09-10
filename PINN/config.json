@@ -1,0 +1,16 @@
+{
+  "K_values":[1,4,8,16],
+  "N":64,
+  "r":0.5,
+  "data_seed":0,
+  "split_seed":0,
+  "model_seed":0,
+  "batch_size":256,
+  "adam_epochs":500,
+  "lbfgs_epochs":500,
+  "lambdabd":400,
+  "snapshot_every":10,
+  "landscape_grid":31,
+  "threads":4,
+  "output_dir":"PINN/results"
+}
