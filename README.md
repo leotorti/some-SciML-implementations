@@ -23,7 +23,7 @@ python -m PINN.run
 python -m FNO.run
 ```
 
-Each experiment reads its own `config.json`. Results go into `PINN/results` and `FNO/results`: model weights, training histories, metrics and figures. Running the same configuration again replaces those outputs, so change `output_dir` to keep another run.
+Each experiment reads its own `config.json`. Results go into `PINN/results` and `FNO/results`: model weights, training histories, metrics and figures. Datasets are stored in `dataset/`, and PINN plotting code and its preview image are in `PINN/visualization/`. Running the same configuration again replaces those outputs, so change `output_dir` to keep another run.
 
 Training settings are in each experiment’s `config.json`. The PINN L-BFGS phase and loss landscapes are the most computationally demanding parts.
 
