@@ -1,0 +1,14 @@
+{
+  "seed":0,
+  "n_lifting":128,
+  "modes":40,
+  "batch_size":32,
+  "fixed_epochs":200,
+  "time_epochs":50,
+  "finetune_epochs":100,
+  "finetune_lr":0.001,
+  "time_weight":1.0,
+  "threads":4,
+  "device":"cpu",
+  "output_dir":"FNO/results"
+}
