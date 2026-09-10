@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+PINN/results/
+FNO/results/
+PINN/smoke_results/
+FNO/smoke_results/
