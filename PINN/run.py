@@ -9,7 +9,7 @@ from.train import fit
 from.losses import total_pde_loss,data_driven_loss
 from.evaluate import evaluate
 from.landscape import loss_landscape
-from.plot import plot_data,plot_training,plot_predictions,plot_landscape,plot_frequency
+from.visualization.plot import plot_data,plot_training,plot_predictions,plot_landscape,plot_frequency
 
 
 def run(config):
@@ -22,7 +22,10 @@ def run(config):
         directory=output_dir/f'K{K}'
         directory.mkdir(exist_ok=True)
         raw=generate_data(config['N'],K,config['r'],config['data_seed'])
-        np.savez(directory/'data.npz',**raw)
+        dataset_dir=Path(__file__).resolve().parents[1]/'dataset'
+        dataset_dir.mkdir(exist_ok=True)
+        filename=f"pinn_K{K}_N{config['N']}_r{config['r']}_seed{config['data_seed']}.npz"
+        np.savez(dataset_dir/filename,**raw)
         data=create_dataloaders(raw,config['split_seed'],config['batch_size'])
         plot_data(raw,config['N'],K,directory/'data.png')
         histories={}

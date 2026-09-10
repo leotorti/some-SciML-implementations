@@ -16,9 +16,9 @@ $$
 u(x,y)=\frac{1}{\pi K^2}\sum_{i,j=1}^K a_{ij}(i^2+j^2)^{r-1}\sin(i\pi x)\sin(j\pi y).
 $$
 
-Increasing $K$ adds higher frequencies. The default experiment uses $K=1,4,8,16$, $r=0.5$ and a grid of $64\times64$ points. The source and solution use the same coefficients, so the PDE and the zero boundary values are known exactly. The generated arrays are saved with each run.
+Increasing $K$ adds higher frequencies. The default experiment uses $K=1,4,8,16$, $r=0.5$ and a grid of $64\times64$ points. The source and solution use the same coefficients, so the PDE and the zero boundary values are known exactly. The generated arrays are saved in `dataset/`, with the frequency, grid size, exponent and seed in each filename.
 
-![Generated source terms and solutions at increasing frequencies](frequencies.png)
+![Generated source terms and solutions at increasing frequencies](visualization/frequencies.png)
 
 ## Models and training
 
@@ -48,7 +48,7 @@ The landscape uses the complete training objective, including the same boundary 
 * `train.py`: Adam, L-BFGS and trajectory snapshots.
 * `evaluate.py`: solution errors and residual metrics.
 * `landscape.py`: PCA directions and loss evaluation.
-* `plot.py`: data, predictions, training curves and landscapes.
+* `visualization/plot.py`: data, predictions, training curves and landscapes.
 * `run.py`: the complete frequency experiment.
 
 Run from the repository folder:
