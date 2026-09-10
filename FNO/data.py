@@ -5,7 +5,7 @@ from torch.utils.data import Dataset,DataLoader
 
 
 TIMES=(0.0,0.25,0.5,0.75,1.0)
-DATA_DIR=Path(__file__).resolve().parent/'data'
+DATA_DIR=Path(__file__).resolve().parents[1]/'dataset'
 
 
 def load_data(filename,data_dir=DATA_DIR,limit=None):

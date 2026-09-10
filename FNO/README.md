@@ -4,7 +4,7 @@ I use a Fourier neural operator to predict the evolution of one-dimensional fiel
 
 ## Data
 
-The arrays are included in `data/`. Each has shape `(trajectories,5,spatial_points)`. The five snapshots are treated as times `0,0.25,0.5,0.75,1.0`, and spatial coordinates use `linspace(0,1,n)`.
+The arrays are included in the top-level `dataset/` folder. Each has shape `(trajectories,5,spatial_points)`. The five snapshots are treated as times `0,0.25,0.5,0.75,1.0`, and spatial coordinates use `linspace(0,1,n)`.
 
 There are two collections:
 
